@@ -100,17 +100,34 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 80%;
   margin: 0 auto;
 }
+
+body,
+button {
+ font-family: "Poppins", sans-serif; 
+}
+
+/* classes  */
+
+.form-group, 
+.gender-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.gender-button { 
+  width: 70%;
+  justify-content: flex-start;
+  margin:0; 
+}
+
 /*=================================
   Header styling starts here
 =================================*/
-
-
-
-
-
 
 /*=================================
   Header styling ends here
@@ -120,13 +137,71 @@ li {
   main styling starts here
 =================================*/
 
+/* Form-container styling starts here */
 
+.form-container {
+  width: 80%;
+  margin: 70px auto 0;
+  border: 1.8px solid #000;
+}
 
+form {
+  width: 70%;
+  margin: 20px auto;
+  border: 1.8px solid #000;
+  padding: 20px 70px;
+  text-align: center;
+}
 
+form label { margin-right: 30px; }
 
+input[type="text"], #address{
+  width: 70%;
+  resize: none;
+  padding: 5px;
+  border: 1.6px solid #000;
+  outline: none;
+}
 
+input[type="radio"], input[type="checkbox"]{
+  margin: 0 15px 0px 0px;
+  transform: scale(1.4);
+}
 
+#address{ height: 100px; }
+.align-left{ justify-content: flex-start; }
 
+button{
+  font-size: 16px;
+  padding: 1px 20px;
+  outline: none;
+  border: 1.6px solid #000;
+  background-color: transparent;
+}
+
+.display,
+.display-box { 
+  width: 100%;  
+}
+
+.display{ margin-bottom: 20px; }
+.display-box{ display: flex; }
+.display-box:first-child{ font-weight: 600; }
+
+.display-box li{
+  width: 15.8%;
+  text-align: center;
+  border: 1px solid #000; 
+  margin:0;
+  border-right: transparent;
+  padding: 5px 10px;
+}
+
+.display-box li:last-child{ border-right: 1px solid #000;  }
+
+#Submit{ margin-right: 6px; }
+
+/* Form-container styling ends here */
 /*=================================
   main styling ends here
 =================================*/
