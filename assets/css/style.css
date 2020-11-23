@@ -201,6 +201,13 @@ button{
 
 #Submit{ margin-right: 6px; }
 
+.display-box .btn{
+  color: #000;
+  background: #989090;
+  padding: 2px 20px;
+  border: 1.5px solid #000;
+}
+
 /* Form-container styling ends here */
 /*=================================
   main styling ends here
