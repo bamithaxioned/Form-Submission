@@ -87,12 +87,3 @@ function display(){
     // Adding Ul to HTML dynamically
     displayContainer.appendChild(newUl);
 }
-
-// Delete Function 
-var ulLength = document.querySelectorAll(".display ul");
-
-for(let i = 0; i<ulLength.length; i++){
-    ulLength[i].onclick = ()=>{
-        console.log("Ul "+ulLength[i]+" Clicked")
-    }
-}
