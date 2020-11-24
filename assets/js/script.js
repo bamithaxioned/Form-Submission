@@ -84,7 +84,7 @@ function display() {
     deleteli.appendChild(deleteAnchor);
     newUl.appendChild(deleteli)
 
-    deleteli.addEventListener("click", deleteUl);
+    // deleteli.addEventListener("click", deleteUl);
 
     // Adding Ul to HTML dynamically
     displayContainer.appendChild(newUl);
