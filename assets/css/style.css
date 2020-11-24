@@ -96,7 +96,6 @@ li {
   display: inline-block;
   list-style-type: none;
 }
-
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
@@ -105,11 +104,9 @@ li {
 }
 
 body,
-button {
+button,input,textarea {
  font-family: "Poppins", sans-serif; 
 }
-
-/* classes  */
 
 .form-group, 
 .gender-button {
@@ -125,19 +122,28 @@ button {
   margin:0; 
 }
 
+.border{ border:1.8px solid #000; }
+.red-border{ border:1.8px solid #e74c36; }
+.green-border{ border:1.8px solid #2ecc71; }
+.red-text{ color:red }
+.green-text{ color: #2ecc71}
+
+span{
+  font-size: 9.5px;
+  display: none;
+}
 /*=================================
   Header styling starts here
 =================================*/
 
 /*=================================
   Header styling ends here
-=================================*/  
+=================================*/
 
 /*=================================
   main styling starts here
 =================================*/
-
-/* Form-container styling starts here */
+/* form styling starts here */
 
 .form-container {
   width: 80%;
@@ -150,56 +156,55 @@ form {
   margin: 20px auto;
   border: 1.8px solid #000;
   padding: 20px 70px;
-  text-align: center;
 }
 
 form label { margin-right: 30px; }
 
-input[type="text"], #address{
+.input-box{
   width: 70%;
+}
+input[type="text"], #address{
+  width: 100%;
   resize: none;
   padding: 5px;
-  border: 1.6px solid #000;
   outline: none;
 }
 
 input[type="radio"], input[type="checkbox"]{
-  margin: 0 15px 0px 0px;
-  transform: scale(1.4);
+ margin: 0 15px 0px 0px;
+ transform: scale(1.4);
 }
 
-#address{ height: 100px; }
-.align-left{ justify-content: flex-start; }
+#address { height: 100px; }
+.align-left { justify-content: flex-start; }
 
-button{
-  font-size: 16px;
-  padding: 1px 20px;
-  outline: none;
-  border: 1.6px solid #000;
-  background-color: transparent;
+button {
+ font-size: 15px;
+ padding: 1px 20px;
+ outline: none;
+ border: 1.6px solid #000;
+ background-color: transparent;
 }
 
 .display,
 .display-box { 
-  width: 100%;  
+ width: 100%;  
 }
 
-.display{ margin-bottom: 20px; }
-.display-box{ display: flex; }
-.display-box:first-child{ font-weight: 600; }
+.display { margin-bottom: 20px; }
+.display-box { display: flex; }
+.display-box:first-child { font-weight: 600; }
 
-.display-box li{
-  width: 15.8%;
-  text-align: center;
-  border: 1px solid #000; 
-  margin:0;
-  border-right: transparent;
-  padding: 5px 10px;
+.display-box li {
+    width: 15.8%;
+    text-align: center;
+    border: 1px solid #000; 
+    margin:0;
+    border-right: transparent;
+    padding: 5px 10px;
 }
 
-.display-box li:last-child{ border-right: 1px solid #000;  }
-
-#Submit{ margin-right: 6px; }
+.display-box li:last-child { border-right: 1px solid #000;  }
 
 .display-box .btn{
   color: #000;
@@ -207,6 +212,12 @@ button{
   padding: 2px 20px;
   border: 1.5px solid #000;
 }
+
+.buttons{  text-align:center; }
+.input-box.error  input{ border-color:#e74c36; }
+.input-box.error  span{ color:#e74c36; }
+.input-box.success  input{ border-color:#2ecc71; }
+.input-box.success  span{ color:#2ecc71; }
 
 /* Form-container styling ends here */
 /*=================================
