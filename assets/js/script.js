@@ -6,18 +6,18 @@ var cancelBtn = document.getElementById("cancel");
 
 
 // Functioning Submit Button
-submitBtn.addEventListener("click",submit);
+submitBtn.addEventListener("click", submit);
 
-function submit(e){
+function submit(e) {
     e.preventDefault();
 
     let form = document.getElementsByTagName("form")[0];
     let first_name = document.getElementById("firstName").value;
     let last_name = document.getElementById("lastName").value;
     let gender_data = document.querySelector("input[type='radio']:checked");
-        if(gender_data){
-            var gender_value = gender_data.value;
-        }
+    if (gender_data) {
+        var gender_value = gender_data.value;
+    }
     let address_data = document.getElementById("address").value;
     let terms_box = document.querySelector("#terms:checked");
 
@@ -28,37 +28,37 @@ function submit(e){
         address: address_data,
     };
 
-    if(!(form_data.name) || !(form_data.surname) || !(form_data.gender)  || !(form_data.address) || !(terms_box)){
+    if (!(form_data.name) || !(form_data.surname) || !(form_data.gender) || !(form_data.address) || !(terms_box)) {
         alert("Please Fill all the Details Belows..!")
-    }else{
+    } else {
         arr.push(form_data);
         console.log(arr);
         display();
         form.reset();
     }
-    
+
 }
 
 // Functioning Cancel Button
-cancelBtn.addEventListener("click",cancel);
+cancelBtn.addEventListener("click", cancel);
 
-var cancel = ()=>{
+var cancel = () => {
     form.reset();
 }
 
 
+let displayContainer = document.getElementsByClassName("display")[0];
 // Display Function
-function display(){
-    
+function display() {
+
     // Grabbing Display 
-    let displayContainer = document.getElementsByClassName("display")[0];
 
     // Creating Ul
     let newUl = document.createElement("ul");
     newUl.setAttribute("class", "display-box");
 
     // Creating Li
-    for(key in arr[arr.length - 1]){
+    for (key in arr[arr.length - 1]) {
         let newli = document.createElement("li");
         newli.textContent = arr[arr.length - 1][key];
         newUl.appendChild(newli);
@@ -69,7 +69,7 @@ function display(){
     let editAnchor = document.createElement("a");
     editAnchor.setAttribute("title", "Edit");
     editAnchor.setAttribute("class", "btn");
-    editAnchor.setAttribute("href","#FIXME")
+    editAnchor.setAttribute("href", "#FIXME")
     editAnchor.textContent = "Edit";
     editli.appendChild(editAnchor);
     newUl.appendChild(editli)
@@ -79,10 +79,12 @@ function display(){
     let deleteAnchor = document.createElement("a");
     deleteAnchor.setAttribute("title", "Delete");
     deleteAnchor.setAttribute("class", "btn");
-    deleteAnchor.setAttribute("href","#FIXME")
+    deleteAnchor.setAttribute("href", "#FIXME");
     deleteAnchor.textContent = "Delete";
     deleteli.appendChild(deleteAnchor);
     newUl.appendChild(deleteli)
+
+    deleteli.addEventListener("click", deleteUl);
 
     // Adding Ul to HTML dynamically
     displayContainer.appendChild(newUl);
